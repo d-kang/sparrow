@@ -18,12 +18,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/config', (req, res) => {
+  console.log('/client==========================')
+  var data = {
+    domain: process.env.DOMAIN,
+    clientID: process.env.CLIENT_ID
+  }
+  res.send(data)
+})
 // app.use('/',express.static(path.join(__dirname, '../client')));
 
 // AUTH0
 app.use('/', express.static(path.join(__dirname, '../src')));
 app.use('/application', express.static(path.join(__dirname, '../client')));
-
 
 app.get('/api/get/application', (req, res) => {
 });

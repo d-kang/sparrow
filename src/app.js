@@ -1,13 +1,17 @@
 angular // add module dependencies and configure it
   .module('sparrowFit', ['auth0', 'angular-storage', 'angular-jwt', 'ngMaterial', 'ui.router'])
   .config(function($locationProvider, jwtOptionsProvider, $provide, authProvider, $urlRouterProvider, $stateProvider, $httpProvider, jwtInterceptorProvider) {
-
-    authProvider.init({ // for auth0 lock (login)
-      domain: 'sparrow-angluarjs.auth0.com',
-      clientID: 'NJ9hqwCSD6bSnTQ1PlBNNWmxP4aYRFPC',
-      loginUrl: '/#/home'
-    });
-
+    // get domain and clientid from server for auth0
+    $.get('/config')
+      .then(function({domain, clientID}) {
+        authProvider.init({ // for auth0 lock (login)
+          domain: domain,
+          clientID: clientID,
+          loginUrl: '/#/home'
+        });
+      })
+      .catch(console.error);
+      
     $stateProvider
       .state('home', {
         url:'/home',
