@@ -9,8 +9,7 @@
     <!-- Auth0 Lock script and AngularJS module -->
     <script src="//cdn.auth0.com/js/lock-9.0.js"></script>
     <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css">
-    <!-- <script src="https://cdn.auth0.com/js/lock-9.min.js"></script> -->
-    <!-- <script type="text/javascript" src="//cdn.auth0.com/js/lock-9.0.js"></script> -->
+
     <!-- Setting the right viewport (for mobile devices)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
@@ -23,35 +22,27 @@
       </div>
     </div>
 
-    <!-- <script type="text/javascript" src="auth0-variables.js"></script> -->
 
+    <!-- client dependencies from node_modules -->
     <script crossorigin src="node_modules/angular/angular.js"></script>
-
     <script crossorigin src="node_modules/angular-animate/angular-animate.js"></script>
     <script crossorigin src="node_modules/angular-aria/angular-aria.js"></script>
     <script crossorigin src="node_modules/angular-material/angular-material.js"></script>
     <script crossorigin src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
     <script crossorigin src="node_modules/angular-storage/dist/angular-storage.js"></script>
-
     <script crossorigin src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-
-    <!-- also in other -->
     <script crossorigin src="node_modules/auth0-js/build/auth0.js"></script>
     <script crossorigin src="node_modules/auth0-angular/build/auth0-angular.js"></script>
 
-<!-- <script type="text/javascript" crossorigin src="//cdn.auth0.com/w2/auth0-angular-4.2.6.js"></script> -->
-
+    <!-- login scripts -->
     <script crossorigin src="app.js"></script>
-
     <script crossorigin src="login/toolbar/toolbar-dir.js"></script>
     <script crossorigin src="login/profile/profile-ctr.js"></script>
     <script crossorigin src="login/application/application-ctr.js"></script>
     <script crossorigin src="login/design-sandbox/design-sandbox.js"></script>
     <script crossorigin src="login/home/home-ctr.js"></script>
 
-
-    <!-- from client -->
-    <script type="text/javascript" src="client/index.js"></script>
+    <!-- client scripts -->
     <script type="text/javascript" src="client/components/create-workout-component/createWorkout/createWorkout.js"></script>
     <script type="text/javascript" src="client/components/create-workout-component/timed/timed.js"></script>
     <script type="text/javascript" src="client/components/create-workout-component/untimed/untimed.js"></script>
@@ -61,28 +52,21 @@
     <script type="text/javascript" src="client/services/httpServices.js"></script>
     <script type="text/javascript" src="client/services/userDataService.js"></script>
 
-    <!-- Timer Dependencies -->
+    <!-- Flip Clock Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="bower_components/flipclock/compiled/flipclock.min.js"></script>
     <script src="client/timer/timer.js"></script>
     <script type="text/javascript" src="client/services/timerServices.js"></script>
 
-    <!-- components -->
-        <!-- NickO insertions-->
-        <script type="text/javascript" src="client/components/goal-component/goal/goal.js"></script>
-          <script type="text/javascript" src="client/components/goal-component/goals/goals.js"></script>
-           <script type="text/javascript" src="client/components/goal-component/addGoal/addGoal.js"></script>
-           <script type="text/javascript" src="client/components/goal-component/panel/panel.js"></script>
-           <script type="text/javascript" src="client/components/goal-component/goallist/goalList.js"></script>
-           <script type="text/javascript" src="client/components/goal-component/history/history.js"></script>
+    <!-- goal component scripts-->
+    <script type="text/javascript" src="client/components/goal-component/goal/goal.js"></script>
+    <script type="text/javascript" src="client/components/goal-component/goals/goals.js"></script>
+    <script type="text/javascript" src="client/components/goal-component/addGoal/addGoal.js"></script>
+    <script type="text/javascript" src="client/components/goal-component/panel/panel.js"></script>
+    <script type="text/javascript" src="client/components/goal-component/goallist/goalList.js"></script>
+    <script type="text/javascript" src="client/components/goal-component/history/history.js"></script>
+    <script type="text/javascript" src="client/client-sample-data/sample-goals.js"></script>
+    <script type="text/javascript" src="client/services/goalService.js"></script>
 
-          <!--  src/client/components/goal-component/panel -->
-        <!-- end NickO insertions-->
-
-    <!-- services -->
-        <!-- NickO insertions-->
-          <script type="text/javascript" src="client/client-sample-data/sample-goals.js"></script>
-          <script type="text/javascript" src="client/services/goalService.js"></script>
-        <!-- end NickO insertions-->
   </body>
 </html>
