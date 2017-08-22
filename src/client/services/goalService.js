@@ -5,8 +5,7 @@ angular.module('sparrowFit')
 
   this.getAllGoals= function (){
     var allGoals=$http.get('/api/get/goals');
-    console.log('allGoals in goalService',allGoals);
-   return allGoals;
+    return allGoals;
   }
   this.getGoal=function(goalID){
 

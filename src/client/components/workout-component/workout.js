@@ -16,11 +16,9 @@ angular.module('sparrowFit')
     } else {
       this.untimed = false;
     }
-    console.log('Timed value :', this.timed);
   };
 
   httpService.getData(this.url, (returnValue) => {
-    console.log(1, returnValue)
     this.userData = returnValue[0];
 
     this.myTimedTemplates = this.userData
@@ -28,7 +26,6 @@ angular.module('sparrowFit')
       return a.timed;
     })
     .map((a) => {
-      console.log('a', a)
       return a.templateName;
     })
     this.myUntimedTemplates = this.userData
@@ -41,12 +38,10 @@ angular.module('sparrowFit')
   });
 
   this.getTimedTemps = function getTimedTemps() {
-    console.log('hi from getTimedTemps');
     this.showTimed = this.myTimedTemplates;
   };
 
   this.getUntimedTemps = function getUntimedTemps() {
-    console.log('hi from getUntimedTemps');
     this.showUntimed = this.myUntimedTemplates;
   };
 
